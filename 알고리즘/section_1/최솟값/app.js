@@ -2,9 +2,16 @@
 
 function solution(a, b, c){
     
-    let answer = Math.min(a,b,c);
-    console.log(answer)
-    
+    // let answer = Math.min(a,b,c);
+    if(a < b){
+        answer = a;
+    }else{
+        answer = b;
+    if(c < answer){
+        answer = c;
+    }
+    return answer;
+}
 }
 
-solution(6, 5, 11);
+console.log(solution(6, 5, 11));
