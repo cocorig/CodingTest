@@ -1,9 +1,11 @@
 function solution(array, n) {
    let cnt = 0;
-    array.map((v)=>{
-        if(v === n){
-            cnt += 1;
-        }
+   
+    array.forEach(item=>{
+      if(item === n){
+        cnt++;
+      }
     })
+
     return cnt
 }
