@@ -1,14 +1,14 @@
 function solution(age) {
-    let list = 'abcdefghij';
-    let answer = age.toString().split("").map(Number);
-    let result ='';
-    for(let i=0; i < answer.length; i++){
-      result +=  list[answer[i]];
-
-    }
-    return result;
+  const ageArr = String(age).split("");
   
+  let ans = "";
+  
+  for(let i = 0; i < ageArr.length; i++){
+      ans += String.fromCharCode(Number(ageArr[i]) + 97);
   }
- 
+  
+  return ans;
+}
+
 
    
