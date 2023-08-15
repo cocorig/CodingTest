@@ -1,8 +1,7 @@
-function solution(my_string) {
-    let str = '';
-    for(let i = my_string.length-1; i >=0; i--){
-        str += my_string.charAt(i)
-        
-    }
-   return str;
+
+function solution(my_string){
+  return  my_string.split('').reverse().join('');
+
 }
+
+
