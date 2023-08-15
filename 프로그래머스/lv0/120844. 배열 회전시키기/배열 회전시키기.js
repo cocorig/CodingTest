@@ -1,11 +1,18 @@
 function solution(numbers, direction) {
-   let result = []
-   if(direction == 'right'){
-       numbers.unshift(numbers.pop());
-   }else{
+  let ans = [];
+    if(direction == "right"){
+      //  뒤의 원소를 빼서 앞으로 
+
+     numbers.unshift( numbers.pop())
+ 
+    } 
+    else if(direction == "left"){
+    //앞에 원소를 빼서 뒤로 
+  
+ 
        numbers.push(numbers.shift());
-   }
-     result = numbers;
-    return result;
-    
-}
+   
+    }
+    ans =  numbers;
+    return ans;
+  }
