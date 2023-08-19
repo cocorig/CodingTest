@@ -15,11 +15,12 @@ function getGCD(a,b){
   }
   return a;
 }
-console.log(getGCD(a ,b));
+console.log(getGCD(a ,b)); // 최대공약수
+
 
 function getLCM(a,b){
   let g = getGCD(a,b);
-  return (g * (a / g) * (b / g));
+  return (a * b) / g ;
 }
-console.log(getLCM(a,b));
-
+console.log(getLCM(a,b)); // 최소공배수
+ 
