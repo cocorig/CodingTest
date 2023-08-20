@@ -1,17 +1,10 @@
 function solution(i, j, k) {
-    let cnt = 0;
-    for(let num = i; num <=j; num++){
-   
-        let arr = num.toString().split('');
-        arr.map((n)=>{
-           if(n == k){
-              cnt += 1;
-            
-           }else{
-               return 0;
-           }
-         })
-       
-   }
- return cnt;
-}
+  let arr = '';
+  for(let n = i; n <= j; n++){
+    arr += n;
+  }
+   const ans = arr.split('').filter(v => {
+    return v === k.toString();
+  });
+  return ans.length;
+ }
