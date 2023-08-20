@@ -10,7 +10,7 @@ function solution(s){
         let num = item.charCodeAt();
         //소문자이면 
         if(num >= 97 && num <= 122){
-            answers += String.fromCharCode(num -32);
+            answers += String.fromCharCode(num - 32);
         }else{
             answers += item;
         }

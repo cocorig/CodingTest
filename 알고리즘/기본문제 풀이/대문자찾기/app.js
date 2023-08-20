@@ -1,13 +1,13 @@
 function solution(s){         
     let answer = 0;
     for(let item of s){
-        // let num = item.charCodeAt();
-        // if(num >= 65 && num <= 90){
-        //     answer++
-        // }
-        if (item === item.toUpperCase()){
-            answer++;
-        }      
+        let num = item.charCodeAt();
+        if(num >= 65 && num <= 90){ // 대문자의 아스키코드 번호는 65이상~90이하
+            answer++
+        }
+        // if (item === item.toUpperCase()){
+        //     answer++;
+        // }      
     
     }
 
