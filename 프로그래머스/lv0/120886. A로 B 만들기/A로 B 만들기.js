@@ -1,4 +1,8 @@
 function solution(before, after) {
-const ans =  before.split('').sort().join('') === after.split('').sort().join('') ?  1 : 0
-   return ans
-}
+
+  const Newbefore = before.split('').sort().join('');
+  const Newafter = after.split('').sort().join('');
+  console.log(Newbefore , Newafter);
+  return Newbefore === Newafter ? 1 : 0;
+
+  }
