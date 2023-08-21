@@ -1,7 +1,9 @@
-function solution(my_str, n) {
-    let arr = [];
-    for(let i=0;i< my_str.length; i = i+n){
-        arr.push(my_str.slice(i,n+i))
-    }
-    return arr;
+
+function solution(my_str ,  n){
+let arr = my_str.split("");
+let ans = [ ];
+while(arr.length > 0){
+ ans.push(arr.splice(0, n).join("")); 
+}
+return ans;
 }
