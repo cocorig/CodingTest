@@ -1,21 +1,11 @@
-function solution(n) {
-    
-    
-   let ans = 0;
-    
-    for(let i = 1; i <= n; i++){
-        ans += 1;
-        
-        while(true){
-            if(ans % 3 === 0 || String(ans).includes('3')){
-                ans += 1;
-                
-                continue;
-            }
-            
-            break;
-        }
+function solution(n){
+  const arr = [];
+  for(let i=1; arr.length < n; i++){
+    if( i.toString().split('').includes('3') || i % 3 === 0 ){
+      continue;
+    }else{
+      arr.push(i)
     }
-    
-  return(ans)
+  }
+ return arr[n - 1];
 }
