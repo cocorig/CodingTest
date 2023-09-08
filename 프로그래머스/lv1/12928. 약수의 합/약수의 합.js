@@ -4,8 +4,8 @@ function solution(n) {
   console.log(sqrtN);// 3
 
   for(let i = 1; i <= sqrtN; i++){ // 1 ~ 3까지만 반복
-      if(n % i === 0){   // 3  % 1 , 3 % 2 , 3 % 3
-          result.push(i); // 1 ,3
+      if(n % i === 0){  
+          result.push(i); 
           if(i !== n / i){
               result.push(n / i);
           }
