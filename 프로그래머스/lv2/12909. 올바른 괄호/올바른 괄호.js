@@ -18,10 +18,6 @@ function solution(s){
         }
     }
     
-    if(stack.length > 0){
-        return false;
-    }
-    
-    return true;
+      return stack.length > 0  ?  false : true;
 }
 
