@@ -1,17 +1,11 @@
-function solution(s) {
-  s = s.split("");
-
-  let stack = [];
-  for (let i of s) {
-    if (i === "(") {
-      stack.push(i);
-    } else {
-      if (stack.length === 0) {
-        return false;
-      }
-      stack.pop();
+function solution(s){
+    let sum = 0;
+  	if(s[0] === ')')
+      return false;
+    for(let i = 0; i < s.length; i++){
+        s[i] === '(' ? sum += 1 : sum -= 1
+        if(sum < 0)
+            return false;
     }
-  }
-
-  return stack.length === 0;
+    return sum === 0 ? true : false;
 }
