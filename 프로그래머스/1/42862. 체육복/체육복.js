@@ -1,29 +1,16 @@
 function solution(n, lost, reserve) {
-    const students = {};
+    let reserveSet = new Set(reserve.filter(r => !lost.includes(r)));
+    let lostSet = new Set(lost.filter(l => !reserve.includes(l)));
 
-    for (let i = 1; i <= n; i++) {
-        students[i] = 1;
-    }
-
-    for (let i = 0; i < lost.length; i++) {
-        students[lost[i]]--;
-    }
-
-    for (let i = 0; i < reserve.length; i++) {
-        students[reserve[i]]++;
-    }
-
-    for (let i = 1; i <= n; i++) {
-        if (students[i] === 0) {
-            if (students[i - 1] === 2) {
-                students[i - 1]--;
-                students[i]++;
-            } else if (students[i + 1] === 2) {
-                students[i + 1]--;
-                students[i]++;
-            }
+    for (let student of reserveSet) {
+        if (lostSet.has(student)) {
+            lostSet.delete(student);
+        } else if (lostSet.has(student - 1)) {
+            lostSet.delete(student - 1);
+        } else if (lostSet.has(student + 1)) {
+            lostSet.delete(student + 1);
         }
     }
 
-    return Object.values(students).filter(val => val > 0).length;
+    return n - lostSet.size;
 }
