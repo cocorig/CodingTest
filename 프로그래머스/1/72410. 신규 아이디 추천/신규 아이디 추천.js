@@ -1,8 +1,5 @@
 function solution(new_id) {
-  new_id = new_id.toLowerCase();
-  new_id = new_id.replace(/[^a-z0-9\-_.]/g, "");
-  new_id = new_id.replace(/\.+/g, ".");
-  new_id = new_id.replace(/^\.|\.$/g, "");
+  new_id = new_id.toLowerCase().replace(/[^a-z0-9\-_.]/g, "").replace(/\.+/g, ".").replace(/^\.|\.$/g, "");
   if (new_id === "") {
     new_id = "a";
   }
