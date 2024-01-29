@@ -21,7 +21,6 @@ class LinkedList {
     let node = new Node(data);
     let current;
     // if empty, make head
-
     if (!this.head) {
       this.head = node;
     } else {
@@ -100,6 +99,27 @@ class LinkedList {
     }
     this.size--;
   }
+  // Remove at data
+  removeDataAt(data) {
+    let current = this.head;
+    let previous = null;
+
+    while (current) {
+      if (current.data === data) {
+        if (previous === null) {
+          this.head = current.next;
+        } else {
+          previous.next = current.next;
+        }
+
+        this.size--;
+        return;
+      }
+
+      previous = current;
+      current = current.next;
+    }
+  }
   // Clear list
   clearList() {
     this.head = null;
@@ -122,6 +142,8 @@ ll.insertLast(300);
 ll.insertAt(500, 1); // 값 , 위치 ,두번째 인덱스에 위치
 ll.insertAt(500, 10); // 없는 인덱스면 그냥 패스함 -> 다르게 해도 됨
 
+ll.removeDataAt(100); //
+ll.printListData();
 // ll.getAt(1); // 500
 ll.removeAt(0); /// 0번째 값 삭제
 // ll.printListData();
@@ -131,4 +153,3 @@ ll.removeAt(0); /// 0번째 값 삭제
 // 300;
 
 ll.clearList(); //삭제
-ll.printListData();
