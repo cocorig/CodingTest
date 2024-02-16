@@ -8,7 +8,7 @@ function binarySearch(arr, target) {
   // 검색 범위가 좁혀질 때까지 반복한다.
   while (r >= l) {
     console.log(`${l}에서 ${r}까지 검색을 시작합니다.`);
-    mid = l + Math.floor((r - l) / 2); // 중간 인덱스를 계산한다.
+    mid = Math.floor((r - l) / 2); // 중간 인덱스를 계산한다.
     // 중간 요소가 목표값과 동일한지 확인한다.
     if (arr[mid] === target) {
       return mid; // 목표값을 찾은 경우 중간 인덱스를 반환한다.

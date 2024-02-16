@@ -4,7 +4,7 @@ function BinarySearch(arr, target) {
   let rightIndex = arr.length - 1;
 
   while (leftIndex <= rightIndex) {
-    let middleIndex = leftIndex + Math.floor(leftIndex + rightIndex) / 2;
+    let middleIndex = Math.floor((leftIndex + rightIndex) / 2);
     console.log(middleIndex);
     // 중간 요소가 목표값과 동일한지 확인한다.
     if (target === arr[middleIndex]) {
@@ -19,4 +19,4 @@ function BinarySearch(arr, target) {
   return -1;
 }
 
-console.log(BinarySearch([-5, 2, 10, 4, 6], 6));
+console.log(BinarySearch([-1, 0, 3, 5, 9, 12], 9));
