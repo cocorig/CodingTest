@@ -37,22 +37,22 @@ class LinkedList {
 }
 let node1 = new ListNode(2); // 두개의 노드
 let node2 = new ListNode(5);
-node1.next = node2; //포인터
-console.log(node1);
+// node1.next = node2; //포인터
+// console.log(node1);
 //ListNode { data: 2, next: ListNode { data: 5, next: null } }
 
 // node1를 사용해 연결리스트 만들기
-let list = new LinkedList(node1);
-console.log(list);
-// LinkedList {
-//   head: ListNode { data: 2, next: ListNode { data: 5, next: null } }
-// }
+// let list = new LinkedList(node1);
+// console.log(list);
+// // LinkedList {
+// //   head: ListNode { data: 2, next: ListNode { data: 5, next: null } }
+// // }
 
-// head
-console.log(list.head.data); // 2
-// 다음  값
-console.log(list.head.next.data); // 5
-console.log(list.head.next.next); // null
+// // head
+// console.log(list.head.data); // 2
+// // 다음  값
+// console.log(list.head.next.data); // 5
+// console.log(list.head.next.next); // null
 
 /* 
     Head
@@ -64,3 +64,5 @@ console.log(list.head.next.next); // null
     (2, next)     (5, next)
 
 */
+
+module.exports = LinkedList;
